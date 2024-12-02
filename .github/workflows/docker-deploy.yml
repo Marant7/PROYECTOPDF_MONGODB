@@ -27,11 +27,12 @@ jobs:
     - name: Test
       run: dotnet test --no-build --verbosity normal
 
-    # Agregar instalación de Docker Compose
+    # Nueva forma de instalar Docker Compose
     - name: Install Docker Compose
       run: |
-        sudo apt-get update
-        sudo apt-get install -y docker-compose-plugin
+        sudo curl -L "https://github.com/docker/compose/releases/download/v2.23.3/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
+        docker-compose --version
       
     - name: Login to Docker Hub
       uses: docker/login-action@v3
@@ -44,5 +45,5 @@ jobs:
         
     - name: Build and push Docker images
       run: |
-        docker compose build
-        docker compose push
+        docker-compose build
+        docker-compose push
