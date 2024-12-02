@@ -1,0 +1,33 @@
+version: '3.8'
+
+services:
+  webapp:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "5460:5460"
+    environment:
+      - ASPNETCORE_URLS=http://+:5460
+      - MongoDB__ConnectionString=mongodb://mongodb:27017
+      - MongoDB__DatabaseName=PDFSolutionsDB
+    depends_on:
+      - mongodb
+    networks:
+      - pdf-network
+
+  mongodb:
+    image: mongo:latest
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongodb_data:/data/db
+    networks:
+      - pdf-network
+
+networks:
+  pdf-network:
+    driver: bridge
+
+volumes:
+  mongodb_data:
