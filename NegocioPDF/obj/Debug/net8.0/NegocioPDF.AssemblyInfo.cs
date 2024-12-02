@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyDescriptionAttribute("Proyecto que permite realizar operaciones de fusión y corte de PDF utilizando .NE" +
     "T Core 8.0.")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a36464206986d23fa873ac9a0a05c6bb40be7c9b")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+dcba92177b9d9b6b330a44c59232f2af16671fec")]
 [assembly: System.Reflection.AssemblyProductAttribute("NegocioPDF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("NegocioPDF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

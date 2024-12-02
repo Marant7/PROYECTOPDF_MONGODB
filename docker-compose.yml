@@ -5,6 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+    image: ${DOCKER_HUB_USERNAME}/pdfsolutions:latest
     ports:
       - "5460:5460"
     environment:
