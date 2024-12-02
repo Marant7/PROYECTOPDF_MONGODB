@@ -5,7 +5,7 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: ${DOCKER_HUB_USERNAME}/pdfsolutions:latest
+    image: ${DOCKER_USERNAME}/pdfsolutions:latest  # Cambiamos el nombre de la variable
     ports:
       - "5460:5460"
     environment:
